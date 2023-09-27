@@ -46,19 +46,23 @@ func (db *Database) CreateSchema(ctx context.Context) (err error) {
             topic   VARCHAR   PRIMARY KEY   NOT NULL
         );
         CREATE TABLE IF NOT EXISTS single_inserts (
-            word    VARCHAR   PRIMARY KEY                NOT NULL,
+            id      SERIAL    PRIMARY KEY                NOT NULL,
+            word    VARCHAR                              NOT NULL,
             topic   VARCHAR   REFERENCES topics(topic)   NOT NULL
         );
         CREATE TABLE IF NOT EXISTS group_inserts (
-            words   VARCHAR   PRIMARY KEY                NOT NULL,
+            id      SERIAL    PRIMARY KEY                NOT NULL,
+            words   VARCHAR                              NOT NULL,
             topic   VARCHAR   REFERENCES topics(topic)   NOT NULL
         );
  		CREATE TABLE IF NOT EXISTS templates (
-            template    VARCHAR   PRIMARY KEY                NOT NULL,
+ 		    id          SERIAL    PRIMARY KEY                NOT NULL,
+            template    VARCHAR                              NOT NULL,
             topic       VARCHAR   REFERENCES topics(topic)   NOT NULL
         );
 		CREATE TABLE IF NOT EXISTS answers (
-            answer     VARCHAR   PRIMARY KEY                NOT NULL,
+		    id         SERIAL    PRIMARY KEY                NOT NULL,
+            answer     VARCHAR                              NOT NULL,
 		    topic      VARCHAR   REFERENCES topics(topic)   NOT NULL
         );
        `
