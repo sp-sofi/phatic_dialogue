@@ -14,6 +14,22 @@ psql postgres://postgres:123456@localhost:7766
 create database phatic_dialogue;
 \q
 ```
+run psql:
+```shell
+psql postgres://postgres:123456@localhost:7766
+```
+create db in psql mode:
+```psql
+create database phatic_dialogue;
+```
+drop db in psql mode:
+```psql
+drop database phatic_dialogue;
+```
+log out from psql mode:
+```psql
+\q
+```
 
 run seed:
 ```shell
