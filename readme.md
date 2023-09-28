@@ -1,3 +1,13 @@
+how to run application
+```text
+  1. run docker
+  2. run psql
+  3. create database
+  4. quit psql
+  5. go seed
+  6. go run
+```
+
 start db linux:
 ```shell
 sudo docker run --name=phatic_dialogue -e POSTGRES_PASSWORD=123456 -p   7766:5432 -d --rm postgres
