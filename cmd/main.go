@@ -166,10 +166,24 @@ func cmdSeed(cmd *cobra.Command, args []string) error {
 		},
 		{
 			topic:         "програмування",
-			templates:     []string{"яку мову _ вивчити ?", "модна мова _", "на чому _ програмують", "яку мову _ обрати"},
+			templates:     []string{"яку мову _ вивчити ?", "модна мова _", "на чому _ програмують ?", "яку мову _ обрати ?"},
 			answers:       []string{"моїм розробникам подобається _ , $", "краще ніж _ ще нічого не придумали , $", "мені наспівала пташечка, що зараз модна _ , $"},
 			singleInserts: []string{"goLang"},
 			groupInserts:  []string{"ви можете дізнатись більше на https://go.dev/"},
+		},
+		{
+			topic:         "рецепти",
+			templates:     []string{"як приготувати _ ?", "як приготувати $ ?", "як готується _ ?", "як готується $ ?", "рецепт _", "рецепт $"},
+			answers:       []string{"спробуйте відвідати _", "Клопотенко звичайно підозрілий тип, але спробуйте його рецепти https://klopotenko.com/reczepti/", "може спробуйте $ ", "особисто я спробував би $"},
+			singleInserts: []string{"https://jisty.com.ua/category/howtocookthat/", "https://fayni-recepty.com.ua/"},
+			groupInserts:  []string{"зварити ля пельмені"},
+		},
+		{
+			topic:         "іжа",
+			templates:     []string{"що приготувати $ ?", "чим здивувати $ ?", "чим здивувати _ ?"},
+			answers:       []string{" спробуйте приготувтаи щось від Клопотенка $ ", "може спробуйте знайти щось на _ ", "можливо щось цікаве попадеться вам на _", "мені порадили подивтись на _", "приготуйте щось незвичайне $", "поексперементуйте на кухні $"},
+			singleInserts: []string{"https://jisty.com.ua/category/howtocookthat/", "https://fayni-recepty.com.ua/"},
+			groupInserts:  []string{"тут ви зможете дізнатись більше https://klopotenko.com/reczepti/"},
 		},
 	}
 
